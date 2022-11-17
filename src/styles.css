@@ -18,6 +18,10 @@
     justify-content: space-evenly;
 }
 
+.dropDownMenu {
+    position: relative;
+}
+
 button {
     font-size: 1.5rem;
     padding: 5px 15px;
@@ -26,3 +30,39 @@ button {
     border: 2px solid black;
     border-radius: 10px;
 }
+
+.dropDownMenu:hover button{
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+}
+
+ul {
+    background-color: lightgreen;
+    position: absolute;
+    top: calc(100% - 2px);
+    left: 0;
+    min-width: 200%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.dropDownMenu:hover > ul {
+    display: block;
+    border: 2px solid black;
+    border-radius: 0 10px 10px 10px;
+}
+
+li {
+    font-size: 1.1rem;
+    list-style: none;
+    padding: 0.3rem 0.5rem;
+}
+
+li:hover {
+    background-color: #eeeeee51;
+}
+
+
+
