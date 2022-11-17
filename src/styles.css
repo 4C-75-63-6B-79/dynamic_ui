@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navbar {
+    background-color: lightskyblue;
+    margin: 20px;
+    padding: 20px 25px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 5px 15px;
+    background-color: lightgreen;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 10px;
+}

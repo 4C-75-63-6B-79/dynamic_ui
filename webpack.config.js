@@ -21,11 +21,16 @@ module.exports = {
     compress: true,
   },
   module: {
-    rules: [],
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Development",
+      title: "Dynamic UI",
       filename: "index.html",
       template: "src/template.html",
     }),
