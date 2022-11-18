@@ -46,7 +46,8 @@ function lineMenuButtonClicked() {
 
 function makeLineButton() {
     if(document.getElementById('lineMenuButton')) {
-        return undefined;
+        const lineButton = document.getElementById('lineMenuButton');
+        lineButton.parentElement.removeChild(lineButton);
     }
     const div = document.createElement('div');
     div.setAttribute('id', 'lineMenuButton');
@@ -70,10 +71,7 @@ function windowResized() {
     const navBar = document.getElementById('navbar');
     if(window.innerWidth < 400) {
         navBar.style.display = 'none';
-        const lineButton = makeLineButton();
-        if(lineButton) {
-            body.appendChild(lineButton);
-        }
+        body.appendChild(makeLineButton());
     } else {
         removeLineMenuButton(body);
         navBar.style.display = 'flex';
