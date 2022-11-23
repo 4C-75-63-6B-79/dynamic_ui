@@ -40,6 +40,7 @@ button {
 ul {
     background-color: lightgreen;
     position: absolute;
+    z-index: 1;
     top: calc(100% - 2px);
     left: 0;
     min-width: 175%;
@@ -96,9 +97,77 @@ span {
     transform: rotate(45deg);
 }
 
+#slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #9f9f9f5b;
+    position: absolute;
+    top: calc(50% - 20px);
+    z-index: 2;
+}
+
+.arrow:hover {
+    background-color: #9f9f9f7b;
+}
+
+#left {
+    left: 0;
+}
+
+#right {
+    right: 0; 
+}
+
+#dotContainer {
+    position: absolute;
+    bottom: 10px;
+    left: 45%;
+    padding: 0.3rem;
+    display: flex;
+    gap: 0.25rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 1;
+}
+
+.clickedDot {
+    background-color: lightseagreen;
+}
+
+img {
+    width: 60%;
+    transition: transform 250ms ease-in;
+    position: absolute;
+    left: 20%;
+}
+
+.onScreen {
+    position: relative;
+}
+
+.offScreenLeft {
+    transform: translateX(-150%);
+}
+
+.offScreenRight {
+    transform: translateX(150%);
+}
+
 @media(max-width: 400px) {
     #navbar {
         position: fixed;
+        top: 0;
         margin: 60px 5% 0;
         flex-direction: column;
         gap: 0.75rem;
@@ -119,6 +188,10 @@ span {
         display: block;
         border-top: none;
         border-radius: 0 0 10px 10px;
+    }
+
+    #slider {
+        margin-top: 100px;
     }
 }
 

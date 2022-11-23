@@ -5,7 +5,6 @@ module.exports = {
   mode: "development",
   entry: {
     index: "./src/index.js",
-    // print: './src/print.js',
   },
   output: {
     filename: "[name].bundle.js",
@@ -25,6 +24,10 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(jpg|png)$/i,
+        type: 'asset/resource',
       },
     ],
   },
